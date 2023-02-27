@@ -3,7 +3,6 @@ services:
   frontend:
     image: fogelsharp/lalafront:latest
     build: .
-
     ports:
       - 80:80
     links:
@@ -22,11 +21,3 @@ services:
     restart: always
     ports:
       - 27017:27017
-  portainer:
-    image: portainer/portainer-ce:latest
-    ports:
-      - 9000:9443
-    volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
-
