@@ -3,8 +3,11 @@ services:
   frontend:
     image: fogelsharp/lalafront:latest
     build: .
+    environment:
+      - LALABACK_URL=backend
     ports:
       - 80:80
+
     links:
       - backend
   backend:
