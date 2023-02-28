@@ -11,7 +11,7 @@ services:
     image: fogelsharp/lalaback:latest
     build: .
     ports:
-      - 30555:30555
+      - 443:30555
     environment:
       - MONGO_URL=mongo
     links:
